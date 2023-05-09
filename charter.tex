@@ -1,13 +1,13 @@
 \documentclass[
 11pt, % The default document font size, options: 10pt, 11pt, 12pt
-codirector, % Uncomment to add a codirector to the title page
+%codirector, % Uncomment to add a codirector to the title page
 ]{charter} 
 
 
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Update de porteros electrico} 
+\titulo{Update de portero electrico} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 \posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -38,9 +38,9 @@ codirector, % Uncomment to add a codirector to the title page
 \juradoTres{Nombre y Apellido (3)}
 \pertenenciaJurTres{pertenencia (3)}
  
-\fechaINICIO{30 de abril de 2021}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{18 de junio de 2021} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{15 de mayo de 2022}	%Fecha de defensa pública del trabajo final
+\fechaINICIO{25 de abril de 2023}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlan{13 de junio de 2023} 	%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{-}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -129,24 +129,22 @@ El proyecto deberá convivir con aquellos usuarios que no deseen sumarse al proy
 El proyecto constará con:
 
 \begin{itemize}
-	\item Unidad en frente de la calle.
-	\item Servidor en la nube.
-	\item Aplicaciòn movil.
-
-
+	\item Unidad en frente de la calle: Será la que hará la interfaz con la botonera tradicional y eventualmente disparar algun evento abrir una puerta. 
+	\item Servidor en la nube: Será quien reciba las señales que se ha presionado un boton en el frete y recibirá cada 1.5 segundos las fotos del frente. 
+	\item Aplicación movil. En donde se podran visualizar las fotos que se van subiendo, como tambien accionar sobre un accionamiento de contacto seco (relay), para realizar la apertura de la puerta eventualmente.
+	
 \end{itemize}
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.5\textwidth]{./Figuras/diagBloques.png}
+\includegraphics[width=1\textwidth]{./Figuras/diagBloques.png}
 \caption{Diagrama en bloques del sistema}
 \label{fig:diagBloques}
 \end{figure}
 
 \vspace{25px}
 
-El tamaño de la tipografía en TODAS las figuras debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama, preferentemente en la gama de colores pastel.
-
+\pagebreak
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
@@ -160,66 +158,59 @@ El tamaño de la tipografía en TODAS las figuras debe ser adecuado para que NO 
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
-Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
+Auspiciante   & \clientename      &\empclientename 	& Socio-Propietario       	\\ \hline
+Cliente       & \clientename      &\empclientename	& Socio-Propietario       	\\ \hline
+Responsable   & \authorname       & UTN-FIUBA        	& Alumno 	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director Trabajo final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+Usuario final & Clientes de \empclientename & -     & -        	\\ \hline
 \end{tabularx}
 \end{table}
  
-Por ejemplo:
 \begin{itemize}
-	\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-	\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-	\item Orientador: María Gómez va a poder ayudar mucho con la definición de los requerimientos.
+	\item Clinete: Serio Starkloff fue quien propuso el proyecto a traves de la vinculacíón del postgrado con empresasas.
+	\item Usuarios Final: Los clientes de SURIX. compuestos principalmente por usuarios con la necesidad de actualizar sus sistemas sin tener que depender de que todo el edificio lo haga.
 \end{itemize}
-
-
 
 
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red}
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
-
-Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
-\end{consigna}
+El propósito de este proyecto es el desarrollo de un sistema para la actualización de porteros electricos, que pueda ser comercializado en el mercado local, y que ofrezca una alternativa de tecnología actualizada ecónómica que pueda coexistir con sistemas tradicionales. 
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
 
-Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
+En este proyecto se incluyen las siguientes actividades:
 
-Explicitar todo lo quede comprendido dentro del alcance del proyecto.
 
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
-
-\end{consigna}
+\begin{itemize}
+	\item Desarrollo de compatibilidad con sistemas actuales.
+	\item Diseño de esquemático y hardware asociado.
+	\item Diseño de la aplicación de usuario.
+	\item Diseño de base de datos en la nube donde alojar la información.
+	\item Diseño del firmware del ESP32 CAM.
+	\item Diseño del firmware del microcontrolador asociado para manejo de la botonera.
+	
+	
+	
+	
+\end{itemize}
 
 
 \section{5. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red}
-``Para el desarrollo del presente proyecto se supone que: ...''
+
+Para el desarrollo del presente proyecto se supone que: 
 
 \begin{itemize}
-	\item Supuesto 1
-	\item Supuesto 2...
+	\item El clinete suministrará los elementos que necesite el alumno para el desarollo del proyecto.
+	\item El tiempo de desarrollo estará ajustado a la duración de la especialidad.
+	\item La estetica del producto y de la aplicación se desarrollará en conjunto con la empresa.
 \end{itemize}
 
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
-\end{consigna}
+
 
 \section{6. Requerimientos}
 \label{sec:requerimientos}
